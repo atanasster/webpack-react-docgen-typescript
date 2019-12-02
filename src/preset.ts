@@ -6,7 +6,7 @@ module.exports.webpack = (
   options?: IOptions & { skipBabelLoader?: boolean },
 ): Configuration => {
   const { skipBabelLoader = false, ...rest } = options;
-  const rules = [...config.module.rules.slice(1)];
+  const rules = [...config.module.rules];
   if (!skipBabelLoader) {
     rules.push(
       {
