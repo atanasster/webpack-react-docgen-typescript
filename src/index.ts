@@ -30,12 +30,15 @@ module.exports.default = async function(source) {
   const cachedFileName = fileNameResolver ? fileNameResolver({ ...this, cacheFolder }) :
     path.join(cacheFolder, createHash('md5').update(this.resourcePath).digest('hex'));
 
+  if (!cachedFileName) {
+    return source;
+  }
   const parseTypes = async () => {
     let parsed;
     try {
       parsed = parser.parse(this.resourcePath);
     } catch (e) {
-      console.warn(`possiboe trouble parsing ${this.resourcePath}`)
+      console.warn(`\nTS: issue parsing ${this.resourcePath}`)
     }  
     const result = parsed && Array.isArray(parsed) && parsed.length > 0 ? parsed : {};
     fs.writeFileSync(cachedFileName, JSON.stringify(result));

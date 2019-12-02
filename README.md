@@ -2,9 +2,12 @@
 
 A webpack loader with cache for react/typescript components for [storybook](https://github.com/storybookjs/storybook)
 
-Uses [react-docgen-typescript](https://github.com/styleguidist/react-docgen-typescript) for typescript prop parsing
-
-
+On the first build (ie `npm run storybook`) the typescript prop tables will be parsed with [react-docgen-typescript](https://github.com/styleguidist/react-docgen-typescript) and saved to a local cache. 
+All subsequent builds will be significantly faster since the PropTables will be read from chache.
+The cache will be invalidated when
+ * the typescript file is changed
+ * the loader options are changed
+ * if the forceRegenerate is set to true
 
 ## Installation
 ```sh
@@ -67,7 +70,7 @@ or with options:
 If true, the cahce files will be regenerated forcefully.
 
 * `fileNameResolver?: (object) => string;`
-custom function to generate file names for the parsed typescript files. By default those files are created in your `node_modules/.cache/webpack-react-docgen-typescript` folder
+custom function to generate file names for the parsed typescript files. By default those files are created in your `node_modules/.cache/webpack-react-docgen-typescript` folder. If this custom function returns false, the file will not be parsed for typescript prop tables
 
 ### The remaining options are parserOptions from [react-docgen-typescript](https://github.com/styleguidist/react-docgen-typescript)
 

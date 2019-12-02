@@ -1,6 +1,6 @@
 {
   "name": "webpack-react-docgen-typescript",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "A webpack loader with cache react-docgen-typescript",
   "keywords": [
     "react",
