@@ -21,7 +21,20 @@ module.exports = {
 }  
 ```
 
-### 1. Manually configure `webpack.config.js`:
+or with options:
+
+```
+  presets: [
+  {
+    name: require.resolve('webpack-react-docgen-typescript/preset'),
+    options: {
+      fileNameResolver: ({ resourcePath, cacheFolder }) => path.join(cacheFolder, resourcePath.replace(/[^a-z0-9]/gi, '_')),
+    },
+  },  
+
+```
+
+### 2. Manually configure `webpack.config.js`:
 ```
   module: {
       rules: [
@@ -37,7 +50,6 @@ module.exports = {
           exclude: /\.(story|stories).(ts|tsx)$/,
           loader: require.resolve("webpack-react-docgen-typescript"),
           options: {
-            //all parserOptions from [react-docgen-typescript](https://github.com/styleguidist/react-docgen-typescript)
             propFilter: { 
               skipPropsWithoutDoc: true,
               skipPropsWithName: ['prop4']
