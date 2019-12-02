@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`column 1`] = `
+"import _classCallCheck from \\"/Users/atanasster/webpack-react-docgen-typescript/node_modules/@babel/runtime/helpers/classCallCheck\\";
+import _createClass from \\"/Users/atanasster/webpack-react-docgen-typescript/node_modules/@babel/runtime/helpers/createClass\\";
+import _possibleConstructorReturn from \\"/Users/atanasster/webpack-react-docgen-typescript/node_modules/@babel/runtime/helpers/possibleConstructorReturn\\";
+import _getPrototypeOf from \\"/Users/atanasster/webpack-react-docgen-typescript/node_modules/@babel/runtime/helpers/getPrototypeOf\\";
+import _inherits from \\"/Users/atanasster/webpack-react-docgen-typescript/node_modules/@babel/runtime/helpers/inherits\\";
+var _jsxFileName = \\"/Users/atanasster/webpack-react-docgen-typescript/test/examples/Column.tsx\\";
+import * as React from 'react';
+import { Component } from 'react';
+/**
+ * Column properties.
+ */
+
+/**
+ * Form column.
+ */
+export var Column =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Column, _Component);
+
+  function Column() {
+    _classCallCheck(this, Column);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Column).apply(this, arguments));
+  }
+
+  _createClass(Column, [{
+    key: \\"render\\",
+    value: function render() {
+      return React.createElement(\\"div\\", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        },
+        __self: this
+      }, \\"Test\\");
+    }
+  }]);
+
+  return Column;
+}(Component);
+
+try {
+  Column.__docgenInfo = {
+    \\"description\\": \\"Form column.\\",
+    \\"displayName\\": \\"Column\\",
+    \\"methods\\": [],
+    \\"props\\": {
+      \\"prop1\\": {
+        \\"defaultValue\\": null,
+        \\"description\\": \\"prop1 description\\",
+        \\"name\\": \\"prop1\\",
+        \\"parent\\": {
+          \\"fileName\\": \\"webpack-react-docgen-typescript/test/examples/Column.tsx\\",
+          \\"name\\": \\"IColumnProps\\"
+        },
+        \\"required\\": false,
+        \\"type\\": {
+          \\"name\\": \\"string\\"
+        }
+      },
+      \\"prop2\\": {
+        \\"defaultValue\\": null,
+        \\"description\\": \\"prop2 description\\",
+        \\"name\\": \\"prop2\\",
+        \\"parent\\": {
+          \\"fileName\\": \\"webpack-react-docgen-typescript/test/examples/Column.tsx\\",
+          \\"name\\": \\"IColumnProps\\"
+        },
+        \\"required\\": true,
+        \\"type\\": {
+          \\"name\\": \\"number\\"
+        }
+      },
+      \\"prop3\\": {
+        \\"defaultValue\\": null,
+        \\"description\\": \\"prop3 description\\",
+        \\"name\\": \\"prop3\\",
+        \\"parent\\": {
+          \\"fileName\\": \\"webpack-react-docgen-typescript/test/examples/Column.tsx\\",
+          \\"name\\": \\"IColumnProps\\"
+        },
+        \\"required\\": true,
+        \\"type\\": {
+          \\"name\\": \\"() => void\\"
+        }
+      }
+    }
+  };
+} catch (e) {//eat exception
+}"
+`;

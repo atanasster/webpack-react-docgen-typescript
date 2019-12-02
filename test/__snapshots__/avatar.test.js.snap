@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`avatar 1`] = `
+"import _objectWithoutProperties from \\"/Users/atanasster/webpack-react-docgen-typescript/node_modules/@babel/runtime/helpers/objectWithoutProperties\\";
+var _jsxFileName = \\"/Users/atanasster/webpack-react-docgen-typescript/test/examples/Avatar.tsx\\";
+import React from 'react';
+
+/**
+* An image with some text, can be used as a user Avatar image<br/>
+* \`import { Avatar } from 'grommet-controls;'\`<br/>
+* \`<Avatar image='...' />\`<br/>
+*/
+export var Avatar = function Avatar(_ref) {
+  var image = _ref.image,
+      title = _ref.title,
+      subTitle = _ref.subTitle,
+      rest = _objectWithoutProperties(_ref, [\\"image\\", \\"title\\", \\"subTitle\\"]);
+
+  return React.createElement(\\"div\\", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, React.createElement(\\"img\\", Object.assign({
+    src: image
+  }, rest, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  })), React.createElement(\\"div\\", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, React.createElement(\\"label\\", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, title), React.createElement(\\"label\\", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, subTitle)));
+};
+
+try {
+  Avatar.__docgenInfo = {
+    \\"description\\": \\"An image with some text, can be used as a user Avatar image<br/>\\\\n\`import { Avatar } from 'grommet-controls;'\`<br/>\\\\n\`<Avatar image='...' />\`<br/>\\",
+    \\"displayName\\": \\"Avatar\\",
+    \\"methods\\": [],
+    \\"props\\": {
+      \\"image\\": {
+        \\"defaultValue\\": null,
+        \\"description\\": \\"Image to be displayed\\",
+        \\"name\\": \\"image\\",
+        \\"parent\\": {
+          \\"fileName\\": \\"webpack-react-docgen-typescript/test/examples/AvatarProps.ts\\",
+          \\"name\\": \\"IAvatarProps\\"
+        },
+        \\"required\\": false,
+        \\"type\\": {
+          \\"name\\": \\"string\\"
+        }
+      },
+      \\"title\\": {
+        \\"defaultValue\\": null,
+        \\"description\\": \\"Main title(name) for the Avatar\\",
+        \\"name\\": \\"title\\",
+        \\"parent\\": {
+          \\"fileName\\": \\"webpack-react-docgen-typescript/test/examples/AvatarProps.ts\\",
+          \\"name\\": \\"IAvatarProps\\"
+        },
+        \\"required\\": false,
+        \\"type\\": {
+          \\"name\\": \\"string\\"
+        }
+      },
+      \\"subTitle\\": {
+        \\"defaultValue\\": null,
+        \\"description\\": \\"Secondary title for the Avatar\\",
+        \\"name\\": \\"subTitle\\",
+        \\"parent\\": {
+          \\"fileName\\": \\"webpack-react-docgen-typescript/test/examples/AvatarProps.ts\\",
+          \\"name\\": \\"IAvatarProps\\"
+        },
+        \\"required\\": false,
+        \\"type\\": {
+          \\"name\\": \\"string\\"
+        }
+      }
+    }
+  };
+} catch (e) {//eat exception
+}"
+`;

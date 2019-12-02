@@ -1,0 +1,62 @@
+{
+  "name": "webpack-react-docgen-typescript",
+  "version": "0.9.0",
+  "description": "A webpack loader with cache react-docgen-typescript",
+  "keywords": [
+    "react",
+    "docgen",
+    "typescript",
+    "react-docgen-typescript",
+    "webpack",
+    "storybook"
+  ],
+  "homepage": "https://github.com/atanasster/webpack-react-docgen-typescript/",
+  "bugs": "https://github.com/atanasster/webpack-react-docgen-typescript/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atanasster/webpack-react-docgen-typescript.git"
+  },
+  "license": "MIT",
+  "author": "Atanas Stoyanov",
+  "main": "index.js",
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "cleanup": "rm -rf dist",
+    "copy": "cp ./package.json dist/ && cp ./README.md dist/",
+    "build": "npm run cleanup && tsc -b && npm run copy",
+    "pub": "pushd ./ && npm run build && cd dist && npm publish && popd",
+    "test": "jest",
+    "debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand"
+  },
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "react-docgen-typescript": "^1.16.1"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.4",
+    "@types/react": "^16.9.13",
+    "@types/webpack": "^4.39.1",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react-app": "^9.0.2",
+    "eslint": "^6.3.0",
+    "jest": "^24.9.0",
+    "loader-utils": "^1.2.3",
+    "memory-fs": "^0.5.0",
+    "react": "^16.12.0",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2"
+  },
+  "jest": {
+    "roots": [
+      "test"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/jest.init.js"
+    ]
+  }
+}
