@@ -88,7 +88,8 @@ try {
           \\"name\\": \\"() => void\\"
         }
       }
-    }
+    },
+    \\"type\\": \\"tsType\\"
   };
 } catch (e) {//eat exception
 }"

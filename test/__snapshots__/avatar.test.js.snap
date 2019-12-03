@@ -96,7 +96,8 @@ try {
           \\"name\\": \\"string\\"
         }
       }
-    }
+    },
+    \\"type\\": \\"tsType\\"
   };
 } catch (e) {//eat exception
 }"

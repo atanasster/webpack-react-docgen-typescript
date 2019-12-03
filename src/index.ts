@@ -12,6 +12,7 @@ module.exports.default = async function(source) {
   const {
     forceRegenerate,
     fileNameResolver,
+    transformProps = tables => tables[0],
     propFilter,
     componentNameResolver,
     shouldExtractLiteralValuesFromEnum,
@@ -84,14 +85,17 @@ module.exports.default = async function(source) {
     docgenInfo = await parseTypes();
   }
   if (Array.isArray(docgenInfo) && docgenInfo.length > 0) {
-    const doc = docgenInfo[0];
-    return  source + `
-    try {
-      ${doc.displayName}.__docgenInfo = ${JSON.stringify(doc)};
-    } catch (e) {
-      //eat exception
-    }
-    `;
+    docgenInfo = transformProps(docgenInfo);
+    if (docgenInfo)  {
+      const doc = Array.isArray(docgenInfo) && docgenInfo.length > 0 ? docgenInfo[0] : docgenInfo;
+      return  source + `
+      try {
+        ${doc.displayName}.__docgenInfo = ${JSON.stringify(doc)};
+      } catch (e) {
+        //eat exception
+      }
+      `;
+    }  
   }
   return source;
 }

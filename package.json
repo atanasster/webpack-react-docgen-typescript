@@ -1,6 +1,6 @@
 {
   "name": "webpack-react-docgen-typescript",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "A webpack loader with cache react-docgen-typescript",
   "keywords": [
     "react",
@@ -26,7 +26,7 @@
     "cleanup": "rm -rf dist",
     "copy": "cp ./package.json dist/ && cp ./README.md dist/",
     "build": "npm run cleanup && tsc -b && npm run copy",
-    "pub": "pushd ./ && npm run build && cd dist && npm publish && popd",
+    "pub": "pushd ./ && npm run build && npm run test && cd dist && npm publish && popd",
     "test": "jest",
     "debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand"
   },
