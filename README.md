@@ -72,7 +72,7 @@ If true, the cahce files will be regenerated forcefully.
 * `fileNameResolver?: (object) => string;`
 custom function to generate file names for the parsed typescript files. By default those files are created in your `node_modules/.cache/webpack-react-docgen-typescript` folder. If this custom function returns false, the file will not be parsed for typescript prop tables
 
-* `transformProps?: (props: ComponentDoc[]) => ComponentDoc || ComponentDoc[];`
+* `transformProps?: (props: ComponentDoc[]) => ComponentDoc | ComponentDoc[];`
 custom function to transform the prop tables as needed. Will receive the prop tables as an array of length at least 1 and can return the element in the array to use, or the full array of type [ComponentDoc](https://github.com/styleguidist/react-docgen-typescript/blob/868faa6ca1bae1b813632eaa6c15f8d6b18447f8/src/parser.ts#L16).
 
 
