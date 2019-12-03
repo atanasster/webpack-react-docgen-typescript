@@ -44,6 +44,7 @@ function (_Component) {
 }(Component);
 
 try {
+  //@ts-ignore
   Column.__docgenInfo = {
     \\"description\\": \\"Form column.\\",
     \\"displayName\\": \\"Column\\",
@@ -91,6 +92,5 @@ try {
     },
     \\"type\\": \\"tsType\\"
   };
-} catch (e) {//eat exception
-}"
+} catch (e) {}"
 `;

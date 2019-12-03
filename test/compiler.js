@@ -22,13 +22,7 @@ export default (fixture, options = {}) => {
         {
           test: /\.(ts|tsx)$/,
           loader: require.resolve("../dist/index.js"),
-          options: {
-            transformProps: tables => tables.map(table => ({ ...table, type: 'tsType' }))[0],
-            propFilter: { 
-              skipPropsWithoutDoc: true,
-              skipPropsWithName: ['prop4'],
-            }
-          }
+          options,
         }
       ],
     }

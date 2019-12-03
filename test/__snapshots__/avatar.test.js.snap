@@ -52,6 +52,7 @@ export var Avatar = function Avatar(_ref) {
 };
 
 try {
+  //@ts-ignore
   Avatar.__docgenInfo = {
     \\"description\\": \\"An image with some text, can be used as a user Avatar image<br/>\\\\n\`import { Avatar } from 'grommet-controls;'\`<br/>\\\\n\`<Avatar image='...' />\`<br/>\\",
     \\"displayName\\": \\"Avatar\\",
@@ -99,6 +100,5 @@ try {
     },
     \\"type\\": \\"tsType\\"
   };
-} catch (e) {//eat exception
-}"
+} catch (e) {}"
 `;

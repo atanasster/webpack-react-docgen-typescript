@@ -1,6 +1,6 @@
 {
   "name": "webpack-react-docgen-typescript",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "A webpack loader with cache react-docgen-typescript",
   "keywords": [
     "react",
@@ -36,7 +36,8 @@
   },
   "devDependencies": {
     "@types/node": "^12.7.4",
-    "@types/react": "^16.9.13",
+    "@types/react": "^16.9.14",
+    "@types/react-dom": "^16.9.4",
     "@types/webpack": "^4.39.1",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
@@ -52,6 +53,7 @@
     "webpack": "^4.41.2"
   },
   "jest": {
+    "testEnvironment": "node",
     "roots": [
       "test"
     ],

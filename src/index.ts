@@ -6,6 +6,7 @@ import { getOptions } from 'loader-utils';
 import { withDefaultConfig } from 'react-docgen-typescript';
 import { createHash } from 'crypto';
 import { IOptions } from './types';
+import { computeComponentName } from './defaults';
 
 module.exports.default = async function(source) {
   const options: IOptions = getOptions(this) || {};
@@ -14,7 +15,7 @@ module.exports.default = async function(source) {
     fileNameResolver,
     transformProps = tables => tables[0],
     propFilter,
-    componentNameResolver,
+    componentNameResolver = computeComponentName,
     shouldExtractLiteralValuesFromEnum,
     savePropValueAsString,
   } = options;
@@ -90,9 +91,9 @@ module.exports.default = async function(source) {
       const doc = Array.isArray(docgenInfo) && docgenInfo.length > 0 ? docgenInfo[0] : docgenInfo;
       return  source + `
       try {
+        //@ts-ignore
         ${doc.displayName}.__docgenInfo = ${JSON.stringify(doc)};
       } catch (e) {
-        //eat exception
       }
       `;
     }  

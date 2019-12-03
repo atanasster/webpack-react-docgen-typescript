@@ -25,6 +25,7 @@ export var Grid = function Grid(props) {
 };
 
 try {
+  //@ts-ignore
   Grid.__docgenInfo = {
     \\"description\\": \\"Form Grid.\\",
     \\"displayName\\": \\"Grid\\",
@@ -68,10 +69,21 @@ try {
         \\"type\\": {
           \\"name\\": \\"() => void\\"
         }
+      },
+      \\"prop4\\": {
+        \\"defaultValue\\": null,
+        \\"description\\": \\"Working grid description\\",
+        \\"name\\": \\"prop4\\",
+        \\"parent\\": {
+          \\"fileName\\": \\"webpack-react-docgen-typescript/test/examples/Grid.tsx\\",
+          \\"name\\": \\"IGridProps\\"
+        },
+        \\"required\\": true,
+        \\"type\\": {
+          \\"name\\": \\"\\\\\\"option1\\\\\\" | \\\\\\"option2\\\\\\" | \\\\\\"option3\\\\\\"\\"
+        }
       }
-    },
-    \\"type\\": \\"tsType\\"
+    }
   };
-} catch (e) {//eat exception
-}"
+} catch (e) {}"
 `;

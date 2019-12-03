@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ref forward 1`] = `
+"var _jsxFileName = \\"/Users/atanasster/webpack-react-docgen-typescript/test/examples/Font.tsx\\";
+import React from \\"react\\";
+
+var Font = function Font(props) {
+  return React.createElement(\\"div\\", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, props.children);
+};
+
+export { Font };
+
+try {
+  //@ts-ignore
+  Font.__docgenInfo = {
+    \\"description\\": \\"\\",
+    \\"displayName\\": \\"Font\\",
+    \\"methods\\": [],
+    \\"props\\": {
+      \\"className\\": {
+        \\"defaultValue\\": null,
+        \\"description\\": \\"\\",
+        \\"name\\": \\"className\\",
+        \\"required\\": false,
+        \\"type\\": {
+          \\"name\\": \\"string\\"
+        }
+      }
+    }
+  };
+} catch (e) {}"
+`;
