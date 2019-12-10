@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`grid 1`] = `
+"import _objectWithoutProperties from \\"/Users/atanasster/webpack-react-docgen-typescript/node_modules/@babel/runtime/helpers/objectWithoutProperties\\";
+var _jsxFileName = \\"/Users/atanasster/webpack-react-docgen-typescript/test/examples/OrProps.tsx\\";
+import React from 'react';
+
+/** Component description imported from comments inside the component file
+ * This React component has its own properties but also accepts all the html \`button\` attributes.
+ */
+export var OrProps = function OrProps(_ref) {
+  var label = _ref.label,
+      rest = _objectWithoutProperties(_ref, [\\"label\\"]);
+
+  return React.createElement(\\"button\\", Object.assign({
+    type: \\"button\\"
+  }, rest, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }), label);
+};
+
+try {
+  //@ts-ignore
+  OrProps.__docgenInfo = {
+    \\"description\\": \\"Component description imported from comments inside the component file\\\\nThis React component has its own properties but also accepts all the html \`button\` attributes.\\",
+    \\"displayName\\": \\"OrProps\\",
+    \\"methods\\": [],
+    \\"props\\": {
+      \\"label\\": {
+        \\"defaultValue\\": null,
+        \\"description\\": \\"Label on Props1\\\\nLabel on Props2\\",
+        \\"name\\": \\"label\\",
+        \\"parent\\": {
+          \\"fileName\\": \\"webpack-react-docgen-typescript/test/examples/OrProps.tsx\\",
+          \\"name\\": \\"Props1\\"
+        },
+        \\"required\\": true,
+        \\"type\\": {
+          \\"name\\": \\"string\\"
+        }
+      }
+    }
+  };
+} catch (e) {}"
+`;
